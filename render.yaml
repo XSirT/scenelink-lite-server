@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: scenelink-lite-service
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    healthCheckPath: /
